@@ -10,6 +10,6 @@
     lazy = false,
     opts = {},
     config = function()
-      vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>")
+      vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>", {desc ="Reveal Neotree"})
     end
   }

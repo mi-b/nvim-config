@@ -3,7 +3,7 @@ return {
   version = "*",
   lazy = false,
   config = function()
-    opts = {
+    local opts = {
       keys = 'etovxqpdygfblzhckisuran'
     }
     require('hop').setup(opts)

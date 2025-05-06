@@ -40,7 +40,7 @@ return {
       dashboard.button( "q", "  Quit NVIM", ":qa<CR>"),
     }
 
-    footer = function()
+    local footer = function()
       local info = {}
       -- info[1] = "  Neovim loaded " .. vim.fn.strftime("%H:%M") .. " on " .. vim.fn.strftime("%d/%m/%Y") .. " '"
       info[1] = ""

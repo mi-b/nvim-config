@@ -11,3 +11,7 @@ map({"n", "v"}, "c", '"_c', opts)
 map({"n", "v"}, "C", '"_C', opts)  
 map({"n", "v"}, "<Del>", '"_x', opts)  
 map("v", "p" , "pgvy", opts)
+
+
+vim.keymap.set("n", "<leader>i", "gg=G``", { desc = "Indent file" })
+ 

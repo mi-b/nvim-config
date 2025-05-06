@@ -35,6 +35,13 @@ sudo dpkg-reconfigure keyboard-configuration
 ### General
 path to config: `~/.config/nvim/init.lua`
 
+install homebrew:
+sudo apt update
+sudo apt install build-essential procps curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+and add to ~/.zshrc   
+
 ### Telescope : live grep
 For using live_grep with telescope, you need ripgrep (rg):
 ```sh

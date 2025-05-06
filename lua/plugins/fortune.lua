@@ -1,3 +1,0 @@
-return {
-  -- "rubiin/fortune.nvim"
-}

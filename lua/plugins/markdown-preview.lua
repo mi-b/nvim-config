@@ -11,6 +11,6 @@ return {
     vim.g.mkdp_auto_close = 1
     vim.g.mkdp_open_to_the_world = 0
     vim.g.mkdp_theme = "dark"
-    vim.g.mkdp_browser = '/usr/bin/firefox'
-  end
+    vim.g.mkdp_browser = "/usr/bin/firefox"
+  end,
 }

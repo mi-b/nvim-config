@@ -1,7 +1,7 @@
 return {
-  'goolord/alpha-nvim',
-  dependencies = {'rubiin/fortune.nvim'},
-  config = function ()
+  "goolord/alpha-nvim",
+  dependencies = { "rubiin/fortune.nvim" },
+  config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
@@ -26,18 +26,17 @@ return {
     --   " ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ",
     --   " ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ",
     --   " ░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓██████▓▒░   ░▒▓██▓▒░  ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ",
-    -- }                                                                           
-
+    -- }
 
     -- Set menu
     dashboard.section.buttons.val = {
-      dashboard.button( "e", "  New file" , ":enew <BAR> startinsert <CR>"),
-      dashboard.button( "f", "󰈞  Find file", ":Telescope find_files<CR>"),
-      dashboard.button( "r", "  Recent"   , ":Telescope oldfiles<CR>"),
-      dashboard.button( "l", "󰁯  Last session", ":SessionRestore<CR>"),
-      dashboard.button( "m", "󰙅  Most frequent", ":Telescope frecency workspace=CWD<CR>"),
-      dashboard.button( "s", "  Settings" , ":e $MYVIMRC | :cd %:p:h | :Neotree<CR>"),
-      dashboard.button( "q", "  Quit NVIM", ":qa<CR>"),
+      dashboard.button("e", "  New file", ":enew <BAR> startinsert <CR>"),
+      dashboard.button("f", "󰈞  Find file", ":Telescope find_files<CR>"),
+      dashboard.button("r", "  Recent", ":Telescope oldfiles<CR>"),
+      dashboard.button("l", "󰁯  Last session", ":SessionRestore<CR>"),
+      dashboard.button("m", "󰙅  Most frequent", ":Telescope frecency workspace=CWD<CR>"),
+      dashboard.button("s", "  Settings", ":e $MYVIMRC | :cd %:p:h | :Neotree<CR>"),
+      dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
     }
 
     local footer = function()
@@ -47,7 +46,7 @@ return {
       local fortune = require("fortune")
       fortune.setup({
         display_format = "mixed",
-        content_types = "mixed"
+        content_types = "mixed",
       })
       local footer = vim.list_extend(info, fortune.get_fortune())
       return footer
@@ -62,8 +61,5 @@ return {
     vim.cmd([[
         autocmd FileType alpha setlocal nofoldenable
         ]])
-
-  end
+  end,
 }
-
-

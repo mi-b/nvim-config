@@ -79,9 +79,13 @@ Get nodejs and npm
 sudo apt install nodejs npm
 ```
 
+cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app
+npm install
+
+
 ### Swagger
 
-node.js permissino error
+node.js permission error
 
 ```sh
 mkdir -p ~/.npm-global

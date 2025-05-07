@@ -36,7 +36,7 @@ return {
       dashboard.button("l", "󰁯  Last session", ":SessionRestore<CR>"),
       dashboard.button("m", "󰙅  Most frequent", ":Telescope frecency workspace=CWD<CR>"),
       dashboard.button("s", "  Settings", ":e $MYVIMRC | :cd %:p:h | :Neotree<CR>"),
-      dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
+      dashboard.button("q", "⏻  Quit NVIM", ":qa<CR>"),
     }
 
     local footer = function()

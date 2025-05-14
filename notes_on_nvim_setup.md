@@ -71,6 +71,12 @@ For using live_grep with telescope, you need ripgrep (rg):
 sudo apt install ripgrep
 ```
 
+Windows:winget:
+
+```sh
+winget install --id=BurntSushi.ripgrep.MSVC  -e
+```
+
 ### Markdown-preview
 
 Get nodejs and npm
@@ -92,4 +98,12 @@ mkdir -p ~/.npm-global
 npm config set prefix '~/.npm-global'
 export PATH="$HOME/.npm-global/bin:$PATH"
 source ~/.zshrc
+```
+
+
+### Others
+Use lazygit
+
+```sh
+winget install lazygit
 ```

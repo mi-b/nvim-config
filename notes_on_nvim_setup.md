@@ -100,10 +100,22 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 source ~/.zshrc
 ```
 
-
 ### Others
 Use lazygit
 
 ```sh
 winget install lazygit
+```
+
+### Debugger
+#### Go
+
+Get go and and [delve](https://github.com/go-delve/delve/tree/master/Documentation/installation):
+
+```sh
+sudo apt install golang-go
+```
+
+```sh
+go install github.com/go-delve/delve/cmd/dlv@latest
 ```

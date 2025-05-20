@@ -1,48 +1,57 @@
 return {
-	"folke/which-key.nvim",
-	event = "VeryLazy",
-	opts = {},
-	-- keys = {
-	-- 	{
-	-- 		"<leader>?",
-	-- 		function()
-	-- 			require("which-key").show({ global = false })
-	-- 		end,
-	-- 		desc = "Buffer Local Keymaps (which-key)",
-	-- 	},
-	-- },
-	config = function()
-		local wk = require("which-key")
-		wk.add({
-			{ "<leader>d", group = "debug" },
-			-- f : icon("Search") "Find"
-			-- p : icon("Package") "Packages"
-			-- l : icon("ActiveLSP") "Language Tools"
-			-- u : icon("Window") "UI/UX"
-			-- b : icon("Tab") "Buffers"
-			-- bs:_icon("Sort") "Sort Buffers"
-			-- d : icon("Debugger") "Debugger"
-			-- g : icon("Git") "Git"
-			-- S : icon("Session") "Session"
-			-- t : icon("Terminal") "Terminal"
-			-- x : icon("List") "Quickfix/Lists"
-			{
-				"<leader>b",
-				group = "buffers",
-				expand = function()
-					return require("which-key.extras").expand.buf()
-				end,
-			},
-			{
-				mode = { "n", "v" },
-				{ "<leader>q", "<cmd>q<cr>", desc = "Quit" },
-				{ "<leader>Q", "<cmd>qall<cr>", desc = "Quit all" },
-				{ "<leader>w", "<cmd>w<cr>", desc = "Write" },
-				{ "<leader>W", "<cmd>wall<cr>", desc = "Write all" },
-				{ "<leader>i", "gg=G", desc = "Indent file" },
-			},
-		})
-	end,
+  { "nvim-tree/nvim-web-devicons", opts = {} },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+    -- keys = {
+    -- 	{
+    -- 		"<leader>?",
+    -- 		function()
+    -- 			require("which-key").show({ global = false })
+    -- 		end,
+    -- 		desc = "Buffer Local Keymaps (which-key)",
+    -- 	},
+    -- },
+    config = function()
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>d", group = "Debug", icon = "🐞"},
+        { "<leader>f", group = "Find" , icon = "🔍"},
+        -- p : icon("Package") "Packages"
+        -- p = { name = "📦 Packages" },
+        { "<leader>l", group = "Language Tools", icon = "🌐" },
+        -- u : icon("Window") "UI/UX"
+        -- b : icon("Tab") "Buffers"
+        -- bs:_icon("Sort") "Sort Buffers"
+        -- d : icon("Debugger") "Debugger"
+        -- g : icon("Git") "Git"
+        -- g = { name = "🌱 Git" },
+        -- S : icon("Session") "Session"
+        -- S = { name = "💾 Session" },
+        -- t : icon("Terminal") "Terminal"
+        -- t = { name = "🖥️ Terminal" },
+        -- x : icon("List") "Quickfix/Lists"
+        -- x = { name = "📋 Quickfix/Lists" },
+        -- b = {   name = "📑 Buffers",
+        {
+          "<leader>b",
+          group = "buffers",
+          expand = function()
+            return require("which-key.extras").expand.buf()
+          end,
+        },
+        {
+          mode = { "n", "v" },
+          { "<leader>q", "<cmd>q<cr>",    desc = "Quit" },
+          { "<leader>Q", "<cmd>qall<cr>", desc = "Quit all" },
+          { "<leader>w", "<cmd>w<cr>",    desc = "Write" },
+          { "<leader>W", "<cmd>wall<cr>", desc = "Write all" },
+          { "<leader>i", "gg=G",          desc = "Indent file" },
+        },
+      })
+    end,
+  }
 }
 
 -- maps.n["<Leader>n"] = { "<Cmd>enew<CR>", desc = "New File" }

@@ -5,7 +5,7 @@ return {
 
 		local sources = {}
 		if not require("utils").is_windows() then
-			table.insert(sources, null_ls.builtins.formatting.stylua)
+			-- table.insert(sources, null_ls.builtins.formatting.stylua)
 			table.insert(sources, null_ls.builtins.formatting.prettier)
 			-- table.insert(sources, null_ls.builtins.formatting.ruff)
 			table.insert(sources, null_ls.builtins.formatting.shfmt.with({ args = { "-i", "4" } }))

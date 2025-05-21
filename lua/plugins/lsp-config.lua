@@ -26,9 +26,11 @@ return {
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
-			-- lspconfig.pyright.setup({
-			--   capabilities = capabilities,
-			-- })
+      if not require("utils").skip_if_windows("pyright") then
+        lspconfig.pyright.setup({
+          capabilities = capabilities,
+        })
+      end
 			-- lspconfig.ruff.setup({
 			--   capabilities = capabilities,
 			--   -- init_options = {
@@ -52,11 +54,10 @@ return {
 			--   end,
 			--   desc = "LSP: Disable hover capability from Ruff",
 			-- })
-
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "lsp hover" })
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "lsp definition" })
-			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "lsp references" })
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "lsp code action" })
-		end,
-	},
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "lsp hover" })
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "lsp definition" })
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "lsp references" })
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "lsp code action" })
+    end,
+  },
 }

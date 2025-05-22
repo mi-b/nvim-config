@@ -16,8 +16,8 @@ return {
     config = function()
       local wk = require("which-key")
       wk.add({
-        { "<leader>d", group = "Debug", icon = "🐞"},
-        { "<leader>f", group = "Find" , icon = "🔍"},
+        { "<leader>d", group = "Debug", icon = "🐞" },
+        { "<leader>f", group = "Find", icon = "🔍" },
         -- p : icon("Package") "Packages"
         -- p = { name = "📦 Packages" },
         { "<leader>l", group = "Language Tools", icon = "🌐" },
@@ -42,12 +42,22 @@ return {
           end,
         },
         {
+          mode = "n",
+          { "<leader>bp", "<cmd>bprevious<cr>",   desc = "Previous buffer" },
+          { "<leader>bn", "<cmd>bnext<cr>",       desc = "Next buffer" },
+          { "<leader>bl", "<cmd>buffers<cr>",     desc = "List buffer" },
+          { "<leader>bb", "<C-^><cr>",            desc = "Last used buffer" },
+          { "<leader>bc", "<cmd>:%bd|e#|bd#<cr>", desc = "Close all other buffers" },
+          { "<leader>bC", "<cmd>:bufdo bd<cr>",   desc = "Close all buffers" },
+        },
+        {
           mode = { "n", "v" },
           { "<leader>q", "<cmd>q<cr>",    desc = "Quit" },
           { "<leader>Q", "<cmd>qall<cr>", desc = "Quit all" },
           { "<leader>w", "<cmd>w<cr>",    desc = "Write" },
           { "<leader>W", "<cmd>wall<cr>", desc = "Write all" },
           { "<leader>i", "gg=G",          desc = "Indent file" },
+          { "<leader>c", "<cmd>bd<cr>",   desc = "Close current buffer" },
         },
       })
     end,

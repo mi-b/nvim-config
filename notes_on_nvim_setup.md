@@ -119,3 +119,10 @@ sudo apt install golang-go
 ```sh
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
+
+Use yazi
+
+https://yazi-rs.github.io/
+
+Use tmux
+
